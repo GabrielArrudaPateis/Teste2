@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Xadrez</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #texto {
+            display: none; /* O texto começa oculto */
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Xadrez</h1>
+    
+    <h2>História do Xadrez:</h2>
+    <p>A história do xadrez é incerta, mas todos os estudos indicam que se originou na Ásia. Uns apontam a Índia, já outros o Uzbequistão ou até mesmo a Pérsia, atual Irã, como sendo o local onde surgiu o xadrez.
+    Nem mesmo a data de criação do xadrez é um consenso entre os acadêmicos. Especialistas indicam que tenha surgido no século III a.C., porém, o primeiro registro escrito do xadrez foi encontrado no século VI,
+    e é esta data que é tida como a mais aceita para a criação do xadrez.</p>
+
+    <button onclick="mostrarTexto()">Saiba Mais</button>
+
+    <p id="texto">O xadrez moderno começou a se popularizar na Europa por volta do século XV. As regras atuais foram padronizadas no século XIX, e o primeiro campeonato mundial aconteceu em 1886.</p>
+    
+    <h3>Tabuleiro e peças</h3>
+    <p>No xadrez há 32 peças, sendo 16 brancas e 16 pretas. São elas:</p>
+    <ul>
+        <li>2 Reis</li>
+        <li>2 Rainhas</li>
+        <li>4 Bispos</li>
+        <li>4 Torres</li>
+        <li>4 Cavalos</li>
+        <li>16 Peões</li>
+    </ul>
+
+    <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpZTvydV.png" 
+         alt="Tabuleiro de Xadrez" width="500">
+
+    <script>
+        function mostrarTexto() {
+            var texto = document.getElementById("texto");
+            if (texto.style.display === "none") {
+                texto.style.display = "block"; // Mostra o texto
+            } else {
+                texto.style.display = "none"; // Oculta o texto
+            }
+        }
+    </script>
+
+</body>
+</html>

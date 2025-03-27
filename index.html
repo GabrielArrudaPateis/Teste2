@@ -11,7 +11,7 @@
             background-color: white;
             color: black;
             font-family: Arial, sans-serif;
-            transition: background 0.5s, color 0.5s;
+            transition: background-color 0.5s, color 0.5s;
         }
 
         /* Modo escuro */
@@ -39,6 +39,11 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        /* Foco nos botões */
+        button:focus {
+            outline: 3px solid #ffbf47;
+        }
     </style>
 </head>
 <body>
@@ -49,8 +54,8 @@
     Nem mesmo a data de criação do xadrez é um consenso entre os acadêmicos. Especialistas indicam que tenha surgido no século III a.C., porém, o primeiro registro escrito do xadrez foi encontrado no século VI,
     e é esta data que é tida como a mais aceita para a criação do xadrez.</p>
 
-    <button onclick="mostrarTexto()">Saiba Mais</button>
-    <button onclick="alternarModo()">Modo Escuro/Claro</button>
+    <button onclick="mostrarTexto()" aria-label="Mostrar mais informações sobre o Xadrez">Saiba Mais</button>
+    <button onclick="alternarModo()" aria-label="Alternar entre modo escuro e claro">Modo Escuro/Claro</button>
 
     <p id="texto">O xadrez moderno começou a se popularizar na Europa por volta do século XV. As regras atuais foram padronizadas no século XIX, e o primeiro campeonato mundial aconteceu em 1886.</p>
     
@@ -66,7 +71,7 @@
     </ul>
 
     <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/PedroPinhata/phpZTvydV.png" 
-         alt="Tabuleiro de Xadrez" width="500">
+         alt="Tabuleiro de Xadrez" width="500" onerror="this.alt='Imagem do tabuleiro de Xadrez não disponível.'">
 
     <script>
         function mostrarTexto() {
